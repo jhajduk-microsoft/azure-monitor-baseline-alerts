@@ -1,0 +1,17 @@
+- name: OSTFilesFree
+  description: Metric that logs the number of free OST files
+  type: Metric
+  verified: true
+  visible: true
+  tags:
+  - hpc
+  properties:
+    metricName: OSTFilesFree
+    metricNamespace: Microsoft.StorageCache/amlFilesystems
+    severity: 3
+    windowSize: PT1M
+    evaluationFrequency: PT30M
+    timeAggregation: Maximum
+    operator: LessThan
+    criterionType: StaticThresholdCriterion
+    threshold: 1.0
